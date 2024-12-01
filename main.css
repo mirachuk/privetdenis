@@ -1,0 +1,118 @@
+/* Подключение шрифта */
+@font-face {
+    font-family: 'Doto';
+    src: url('fonts/Doto-VariableFont_ROND,wght.ttf') format('truetype');
+}
+
+/* Стили для страницы */
+body {
+    font-family: 'Doto', sans-serif;
+    background: green;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    color: #026b0e;
+}
+
+/* Контейнер */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 35px;
+    box-shadow: 0 4px 10px rgba(105, 16, 16, 0.2);
+}
+
+/* Заголовки и текст */
+h1 {
+    font-size: 36px;
+    color: #03450f;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #090101;
+}
+
+/* Кнопки */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background: #044e26;
+    color: #1c0404;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: black;
+}
+
+/* Сообщение */
+#responseMessage {
+    margin-top: 20px;
+    font-size: 20px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Стили для картинок */
+.celebration-image {
+    width: 60%;
+    /* Ограничиваем ширину картинок до 60% от родительского элемента */
+    height: auto;
+    /* Высота будет пропорциональна ширине */
+    border-radius: 15px;
+    transition: opacity 1s ease-in-out;
+    /* Плавное изменение прозрачности */
+}
+
+/* Сделаем вторую картинку скрытой изначально */
+#image2 {
+    opacity: 0;
+    visibility: hidden;
+    /* Скрываем картинку, чтобы она не занимала место на странице */
+}
+
+/* Стиль для контейнера */
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Для экранов шириной до 768px */
+@media (max-width: 76px) {
+    .celebration-image {
+        width: 80%;
+        /* Ограничиваем ширину до 80% для мобильных устройств */
+    }
+}
+
+/* Для экранов шириной до 480px */
+@media (max-width: 480px) {
+    .celebration-image {
+        width: 100%;
+        /* Ограничиваем ширину до 100% для очень маленьких экранов */
+    }
+}
